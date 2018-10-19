@@ -15,4 +15,11 @@ class Item <E extends Number & Comparable<E> >{
 	public E getItem(){
 		return item;
 	}
+	
+	public int compareTo(Item<E> a)
+	{
+		if(item.compareTo(a.item) > 0)	return 1;
+		else if(item.compareTo(a.item) < 0) return -1;
+		else return 0;
+	}
 }

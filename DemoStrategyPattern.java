@@ -26,7 +26,7 @@ public class DemoStrategyPattern {
 		v1.setSortStrategy(new BubbleSorter<Double>());
 		
 		// perform algorithm bubble sort to v1 
-		//v1.performSort();
+		v1.performSort();
 		
         System.out.println("\nThe values in MyVector object v1 after performing BoubleSorter is:");
 		v1.display();
@@ -44,7 +44,7 @@ public class DemoStrategyPattern {
 	        System.out.println("\nThe original values in v2 object are:");
 			v2.display();
 			v2.setSortStrategy(new InsertionSorter<Integer>());;
-			//v2.performSort();
+			v2.performSort();
 	        System.out.println("\nThe values in MyVector object v2 after performing InsertionSorter is:");
 			v2.display();	
 	}

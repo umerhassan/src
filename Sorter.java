@@ -1,9 +1,6 @@
+import java.util.*;
+public interface Sorter <E extends Number & Comparable<E>> {
 
-public class Sorter <E> {
-
-	public void sort() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void performSort(ArrayList<Item<E>> arr); 
 
 }

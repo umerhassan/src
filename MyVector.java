@@ -23,7 +23,7 @@ public class MyVector<E extends Number & Comparable<E>> {
 		}
 		
 		public void performSort() {
-			sorter.sort(storageM);
+			sorter.performSort(storageM);
 		}
 		
 		public void display() {
