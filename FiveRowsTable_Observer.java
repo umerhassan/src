@@ -1,11 +1,11 @@
 import java.util.*;
-public class ThreeColumnTable_Observer implements Observer{
+public class FiveRowsTable_Observer implements Observer{
 	private int idOfObserver;
 	private ArrayList<Double> data;
 	private Subject dList;
 	
 	//ctor
-	ThreeColumnTable_Observer(Subject s)
+	FiveRowsTable_Observer(Subject s)
 	{
 		dList = s;
 		idOfObserver = ++DoubleArrayListSubject.id;
@@ -20,10 +20,17 @@ public class ThreeColumnTable_Observer implements Observer{
 	}
 	
 	public void display(){
-		System.out.println("Notification to One-Row Observer: Data Changed: ");
-		for(int i=1;i<data.size();i++) {
-			System.out.print(data.get(i-1) + " ");
-			if(i%3 == 0) System.out.println();
+		System.out.println("Notification to Five-Rows Table Observer: Data Changed: ");
+		int k=0;
+		for(int i=0;i<data.size();i++) {
+			if(data.size() == k) break;
+			for(int j=0;j<data.size();j++) {
+				if((j-i)>=0 && (j-i)%5 == 0) {
+					System.out.print(data.get(j) + " ");
+					k++;
+				}
+			}
+			System.out.println();
 		}
 		System.out.println();
 

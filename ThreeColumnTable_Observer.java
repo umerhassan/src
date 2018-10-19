@@ -20,8 +20,8 @@ public class ThreeColumnTable_Observer implements Observer{
 	}
 	
 	public void display(){
-		System.out.println("Notification to One-Row Observer: Data Changed: ");
-		for(int i=1;i<data.size();i++) {
+		System.out.println("Notification to ThreeColumnTable_Observer: Data Changed: ");
+		for(int i=1;i<=data.size();i++) {
 			System.out.print(data.get(i-1) + " ");
 			if(i%3 == 0) System.out.println();
 		}

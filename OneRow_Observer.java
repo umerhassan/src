@@ -22,7 +22,9 @@ public class OneRow_Observer implements Observer{
 	public void display(){
 		System.out.println("Notification to One-Row Observer: Data Changed: ");
 		for(int i=0;i<data.size();i++) 
-			System.out.print(data.get(i) + " " + "\n");
+			System.out.print(data.get(i) + " ");
+		System.out.println();
 	}
+	
 	
 }
